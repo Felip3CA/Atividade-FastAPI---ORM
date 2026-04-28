@@ -9,7 +9,7 @@ class Categoria(Base):
     nome = Column(String(100), nullable=False)
     status = Column(Boolean, nullable=False)
     descricao = Column(String(150))
-    produto = relationship("Produto", back_populates="produtos")
+    produto = relationship("Produto", back_populates="categorias")
 
     def __repr__(self):
         return f"Categoria: id: {self.id} - nome: {self.nome} - status: {self.status} - descricao: {self.descricao}"
